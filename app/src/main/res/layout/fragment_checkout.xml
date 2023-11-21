@@ -30,16 +30,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
+        android:id="@+id/textEmailAddress"
         android:hint="Email" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPostalAddress"
+        android:id="@+id/editText_address"
         android:hint="Address" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
+        android:id="@+id/editText_city"
         android:hint="City" />
     <TextView
         android:layout_width="match_parent"
@@ -53,19 +56,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
+        android:id="@+id/editText_cardholderName"
         android:hint="Card Holder Name:" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
+        android:id="@+id/editText_cardNumber"
         android:hint="Card Number:" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/editText_expiryDate"
         android:inputType="number"
         android:hint="Expiration Date:" />
     <EditText
         android:layout_width="match_parent"
+        android:id="@+id/editText_cvv"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:hint="CVV:" />
@@ -80,7 +87,7 @@
         android:text="Pickup Time:" />
 
     <TimePicker
-        android:id="@+id/timePicker_pickupTime"
+        android:id="@+id/timePicker"
         android:layout_width="match_parent"
         android:layout_height="137dp"
         android:timePickerMode="spinner" />

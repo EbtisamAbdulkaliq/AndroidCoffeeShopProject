@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SummaryFragment">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/BackgroundColor">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/imageViewSummaryLogo"
+        android:layout_width="match_parent"
+        android:layout_height="304dp"
+        android:src="@drawable/logo_coffee_shop"
+        />
+    <TextView
+        android:id="@+id/textViewPickupTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="304dp"
+        android:padding="8dp"
+        android:text="Pickup Time: "
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#473B38"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="75dp"
+        android:padding="8dp"
+        android:id="@+id/textViewOrderDetails"
+        android:text="Order Details: "
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#473B38"
+        android:textSize="22dp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+</LinearLayout>
