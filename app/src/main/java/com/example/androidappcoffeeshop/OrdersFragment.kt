@@ -29,13 +29,12 @@ private lateinit var espressoButton: Button
         val view = inflater.inflate(R.layout.fragment_orders, container, false)
 
         val cappuccinoButton = view.findViewById<Button>(R.id.cappuccino)
-
         val darkRoastButton = view.findViewById<Button>(R.id.DarkRoast)
         val blondeRoastButton = view.findViewById<Button>(R.id.button_blondeRoast)
         espressoButton = view.findViewById(R.id.Espressobtn)
         continueButton = view.findViewById(R.id.continueButton)
        // cappuccinoButton = view.findViewById(R.id.cappuccino)
-         extrasCheckboxes = listOf<CheckBox>(
+         extrasCheckboxes = listOf(
             view.findViewById(R.id.checkbox_cream),
             view.findViewById(R.id.checkbox_whole_milk),
             view.findViewById(R.id.checkbox_non_fat_milk),
@@ -51,35 +50,34 @@ private lateinit var espressoButton: Button
 
         //coffee type bottun
         cappuccinoButton.setOnClickListener(View.OnClickListener {
-            val selectedCoffeeType = cappuccinoButton.text.toString()
-            Toast.makeText(requireContext(), "Cappuccino", Toast.LENGTH_SHORT).show()
-        }
-                darkRoastButton.setOnClickListener {
-            Toast.makeText(requireContext(), "darkRoast", Toast.LENGTH_SHORT).show()
-        }
 
-                blondeRoastButton.setOnClickListener {
+       Toast.makeText(requireContext(), "Cappuccino", Toast.LENGTH_SHORT).show()
+       //  }
 
-            Toast.makeText(requireContext(), "Latte", Toast.LENGTH_SHORT).show()
-            // Show the coffee size selection when a coffee type is selected
+          darkRoastButton.setOnClickListener {
+        Toast.makeText(requireContext(), "darkRoast", Toast.LENGTH_SHORT).show()
+         }
+//
+         blondeRoastButton.setOnClickListener {
 
-        }
-                espressoButton.setOnClickListener(View.OnClickListener {
-            Toast.makeText(requireContext(), "Espresso", Toast.LENGTH_SHORT).show()
+      Toast.makeText(requireContext(), "Latte", Toast.LENGTH_SHORT).show()
 
-        }
+        // }
+         espressoButton.setOnClickListener(View.OnClickListener {
+       Toast.makeText(requireContext(), "Espresso", Toast.LENGTH_SHORT).show()
 
+         }
 
 
 
         //continue button
                 continueButton.setOnClickListener {
-            val selectedExtras = mutableListOf<String>()
-            extrasCheckboxes.forEach { checkbox ->
-                if (checkbox.isChecked) {
-                    selectedExtras.add(checkbox.text.toString())
-                }
-            }
+             val selectedExtras = extrasCheckboxes.filter { it.isChecked }.map { it.text.toString() }
+
+//             if (checkbox.isChecked) {
+//                    selectedExtras.add(checkbox.text.toString())
+//                }
+//            }
             val message = if (selectedExtras.isNotEmpty()){
                 "You have selected: ${selectedExtras.joinToString(", ")}"
             } else {
@@ -87,12 +85,14 @@ private lateinit var espressoButton: Button
         }
 Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
 
+             val action = OrdersFragmentDirections.actionOrdersFragmentToSummaryFragment(selectedExtras.toTypedArray())
+             findNavController().navigate(action)
+         }
 
-            val action = OrdersFragmentDirections.actionOrdersFragmentToSummaryFragment(selectedExtras.toTypedArray())
-        findNavController().navigate(action)
-    }
-                return view
-}
+             return view
+         }
+        }
 
 
-}
+
+
