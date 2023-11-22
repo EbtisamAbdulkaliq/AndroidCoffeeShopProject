@@ -97,7 +97,6 @@
         android:layout_height="wrap_content"
         android:text="Place Order"
         android:backgroundTint="#473B38"
-
         android:id="@+id/button_placeOrder" />
     </LinearLayout>
 

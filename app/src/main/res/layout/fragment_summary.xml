@@ -8,9 +8,8 @@
     <ImageView
         android:id="@+id/imageViewSummaryLogo"
         android:layout_width="match_parent"
-        android:layout_height="304dp"
-        android:src="@drawable/logo_coffee_shop"
-        />
+        android:layout_height="247dp"
+        android:src="@drawable/logo_coffee_shop" />
     <TextView
         android:id="@+id/textViewPickupTime"
         android:layout_width="match_parent"
@@ -24,10 +23,10 @@
         android:textStyle="bold" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:padding="8dp"
         android:id="@+id/textViewOrderDetails"
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:padding="8dp"
         android:text="Order Details: "
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#473B38"
