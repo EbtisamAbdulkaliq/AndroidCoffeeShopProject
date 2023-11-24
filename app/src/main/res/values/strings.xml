@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">AndroidAppCoffeeShop</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="about_us">ABDOUT US :The Quality Coffee offers a sanctuary for coffee lovers.  Join us for a taste of D.C. Vibrant spirit in the comfort of our café</string>
+    <string name="about_us">ABDOUT US Join us for a taste of D.C. Vibrant spirit in the comfort of our coffee</string>
     <string name="buttonStartOrdering">Start the order\n</string>
+    <string name="place_order">Place Order</string>
     <item name="textViewPickupTime" type="id">pickup Time txt view</item>
 </resources>

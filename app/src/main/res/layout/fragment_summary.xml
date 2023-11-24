@@ -8,7 +8,7 @@
     <ImageView
         android:id="@+id/imageViewSummaryLogo"
         android:layout_width="match_parent"
-        android:layout_height="247dp"
+        android:layout_height="243dp"
         android:src="@drawable/logo_coffee_shop" />
     <TextView
         android:id="@+id/textViewPickupTime"
@@ -17,7 +17,7 @@
         android:layout_marginTop="304dp"
         android:padding="8dp"
         android:text="Pickup Time: "
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
         android:textColor="#473B38"
         android:textSize="22dp"
         android:textStyle="bold" />
